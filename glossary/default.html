@@ -1,0 +1,17 @@
+{% include "header" %}
+
+	<section>
+		<div class="section group">
+			<div class="glossary-page col span_2_of_2" style="background-color: {{ meta.block_color }}">
+				<h2>{{ title }}</h2>
+				{% for asset in assets %}
+					<img src="{{ asset.url }}">
+				{% endfor %}
+			</div>
+			<div class="glossary-page-entry col span_2_of_2">
+				{{ body }}
+			</div>
+		</div>
+	</section>
+
+{% include "footer" %}

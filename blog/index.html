@@ -1,0 +1,43 @@
+{% include "header" %}
+
+	<section class="blog">
+    <div class="section group">
+			<div class="col span_2_of_2">
+				{% for page in site.pages %}
+		  		{% if page.title == "Blog" %}
+						<h1>{{ page.title }}</h1>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="outer blog-post">
+		<div class="section group">
+			{% for page in site.pages %}
+		  	{% if page.title == "Blog" %}
+		  		{% for post in posts %}
+						<div class="col span_2_of_2">
+							<h4>{{ post.date | date: "%b %d, %Y" }}</h4>
+							<h2>{{ post.title }}</h2>
+							<h3>{{ post.meta.post_summary }}</h3>
+							<a href="{{post.url}}">
+	 							<button class="standard-button">
+	 								<h4>Read More</h4>
+	 							</button>
+	 						</a>
+						</div>
+						<section class="outer">
+    					<div class="section group">
+    						<div class="col span_2_of_2 hoz-rule-blog"></div>
+							</div>
+						</section>
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+
+{% include "footer" %}
+
+

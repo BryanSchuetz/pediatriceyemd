@@ -1,0 +1,115 @@
+{% include "header" %}
+
+	<section class="forms">
+    <div class="section group">
+			<div class="col span_2_of_2">
+				{% for page in site.pages %}
+		  		{% if page.title == "Locations" %}
+						<h1>{{ page.title}}</h1>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+ 	<section class="outer locations-detail">
+		<div class="section group">
+			{% for page in site.pages %}
+				{% if page.title == "Locations" %}
+					{% for subpage in pages %}
+				  	{% if subpage.title == "Fresh Meadows" %}
+							<div class="col span_1_of_3">
+					 			<div class="locations-detail-img-wrapper">
+					 				{% for asset in subpage.assets %}
+					 					<img src="{{ asset.url }}">
+					 				{% endfor %}
+					 			</div>
+					 			<i class="ss-icon">Location</i>
+					 			<h4 class="locations-detail-spacer">{{ subpage.title }}</h4>
+					 			<h3>{{ subpage.body }}</h3>
+					 			<a href="{{ subpage.meta.office_map_url }}" target="_blank">
+					 				<button class="standard-button">
+					 					<h4>See Map</h4>
+					 				</button>
+				 				</a>
+				 			</div>
+						{% endif %}
+					{% endfor %}
+
+					{% for subpage in pages %}
+				  	{% if subpage.title == "Ridgewood" %}
+							<div class="col span_1_of_3">
+					 			<div class="locations-detail-img-wrapper">
+					 				{% for asset in subpage.assets %}
+					 					<img src="{{ asset.url }}">
+					 				{% endfor %}
+					 			</div>
+					 			<i class="ss-icon">Location</i>
+					 			<h4 class="locations-detail-spacer">{{ subpage.title }}</h4>
+					 			<h3>{{ subpage.body }}</h3>
+					 			<a href="{{ subpage.meta.office_map_url }}" target="_blank">
+					 				<button class="standard-button">
+					 					<h4>See Map</h4>
+					 				</button>
+				 				</a>
+				 			</div>
+						{% endif %}
+					{% endfor %}
+
+					{% for subpage in pages %}
+				  	{% if subpage.title == "Sunnyside" %}
+							<div class="col span_1_of_3">
+					 			<div class="locations-detail-img-wrapper">
+					 				{% for asset in subpage.assets %}
+					 					<img src="{{ asset.url }}">
+					 				{% endfor %}
+					 			</div>
+					 			<i class="ss-icon">Location</i>
+					 			<h4 class="locations-detail-spacer">{{ subpage.title }}</h4>
+					 			<h3>{{ subpage.body }}</h3>
+					 			<a href="{{ subpage.meta.office_map_url }}" target="_blank">
+					 				<button class="standard-button">
+					 					<h4>See Map</h4>
+					 				</button>
+				 				</a>
+				 			</div>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+  	</div>
+ 	</section>
+
+ 	<section class="appointment">
+	 	<div class="section group">
+	 		<div class="col span_2_of_2">
+	 			<h4>Book an Appointment</h4>
+	 			<h2>718 <span class="color-blue">•</span> 468 <span class="color-blue">•</span> 9800</h2>
+	 		</div>
+	 	</div>
+ 	</section>
+
+ 	<section class="email">
+ 		<div class="section group">
+ 			<div class="col span_1_of_2">
+ 			 	<h4>General Information</h4>
+ 			 	<a href="mailto:info@pediatriceyemd.com?subject=General Inquiry for PediatricEyeMD" target="_blank">
+					<button class="standard-button">
+					 	<h4>Email Us</h4>
+					</button>
+				 	</a>
+				 	<h4 class="location-note">We cannot make appointments via e-mail – please call us.</h4>
+ 			</div>
+ 			<div class="col span_1_of_2">
+ 			 	<h4>Surgical Coordinator</h4>
+ 			 	<a href="mailto:surgery@pediatriceyemd.com?subject=Surgical Inquiry for PediatricEyeMD" target="_blank">
+					<button class="standard-button">
+					 	<h4>Email Us</h4>
+					</button>
+				 	</a>
+				 	<h4 class="location-note">We cannot make appointments via e-mail – please call us.</h4>
+ 			</div>
+ 		<div>
+ 	</section>
+
+{% include "footer" %}

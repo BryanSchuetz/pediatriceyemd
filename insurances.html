@@ -1,0 +1,42 @@
+{% include "header" %}
+
+	<section class="forms">
+    <div class="section group">
+			<div class="col span_2_of_2">
+				<h1>Insurances</h1>
+			</div>
+		</div>
+	</section>
+
+ 	<section class="outer insurances">
+ 		<div class="section group">
+ 			<div class="col span_1_of_2">
+ 				<h2>{{ meta.insurances-description }}</h2>
+ 			</div>
+ 			<div class="col span_1_of_2">
+ 				<h4>Accepted Insurances</h4>
+ 				{% for page in site.pages %}
+			  	{% if page.title == "Insurances" %}
+			  		{{page.body}}
+			  	{% endif %}
+			  {% endfor %}
+			  <h4>{{ meta.insurances-last-updated }}</h4>
+ 			</div>
+ 		</div>
+ 	</section>
+
+	<section class="outer organization">
+	 	<div class="section group">
+	 		<div class="col span_1_of_3">
+	 			<a href="http://www.aao.org/"><img src=/assets/aao.png></a>
+	 		</div>
+	 		<div class="col span_1_of_3">
+	 			<a href="http://www.aapos.org/"><img src=/assets/aapos.png></a>
+	 		</div>
+	 		<div class="col span_1_of_3">
+	 			<a href="http://www.nyee.edu/"><img src=/assets/nyeeims.png></a>
+	 		</div>
+	 	</div>
+	</section>
+
+{% include "footer" %}

@@ -1,0 +1,19 @@
+{% include "header" %}
+
+	<section>
+		<div class="section group">
+			{% for page in site.pages %}
+		  	{% if page.title == "Exotropia" %}
+						<div class="glossary-entry col span_1_of_3" style="background-color: {{ subpage.meta.block_color }}">
+							<h2>{{ subpage.title }}</h2>
+							{% for asset in page.assets %}
+								<img src="{{asset.url}}">
+							{% endfor %}
+						</div>
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+
+{% include "footer" %}

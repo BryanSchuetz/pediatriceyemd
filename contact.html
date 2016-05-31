@@ -1,0 +1,47 @@
+{% include "header" %}
+
+	<section class="forms">
+    <div class="section group">
+			<div class="col span_2_of_2">
+				{% for page in site.pages %}
+		  		{% if page.title == "Contact" %}
+						<h1>{{ page.title}}</h1>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+ 	<section class="appointment rule-top">
+	 	<div class="section group">
+	 		<div class="col span_2_of_2">
+	 			<h4>Book an Appointment</h4>
+	 			<h2>718 <span class="color-blue">•</span> 468 <span class="color-blue">•</span> 9800</h2>
+	 		</div>
+	 	</div>
+ 	</section>
+
+ 	<section class="email">
+ 		<div class="section group">
+ 			<div class="col span_1_of_2">
+ 			 	<h4>General Information</h4>
+ 			 	<a href="mailto:info@pediatriceyemd.com?subject=General Inquiry for PediatricEyeMD" target="_blank">
+					<button class="standard-button">
+					 	<h4>Email Us</h4>
+					</button>
+				 	</a>
+				 	<h4 class="location-note">We cannot make appointments via e-mail – please call us.</h4>
+ 			</div>
+ 			<div class="col span_1_of_2">
+ 			 	<h4>Surgical Coordinator</h4>
+ 			 	<a href="mailto:surgery@pediatriceyemd.com?subject=Surgical Inquiry for PediatricEyeMD" target="_blank">
+					<button class="standard-button">
+					 	<h4>Email Us</h4>
+					</button>
+				 	</a>
+				 	<h4 class="location-note">We cannot make appointments via e-mail – please call us.</h4>
+ 			</div>
+ 		<div>
+ 	</section>
+
+{% include "footer" %}

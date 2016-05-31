@@ -1,0 +1,33 @@
+{% include "header" %}
+
+	<section class="glossary">
+    <div class="section group">
+			<div class="col span_2_of_2">
+				{% for page in site.pages %}
+		  		{% if page.title == "Glossary" %}
+						<h1>{{ page.title }}</h1>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="section group">
+			{% for page in site.pages %}
+		  	{% if page.title == "Glossary" %}
+		  		{% for subpage in pages %}
+						<div class="glossary-entry col span_1_of_3" style="background-color: {{ subpage.meta.block_color }}">
+							<h2>{{ subpage.title }}</h2>
+							{% for asset in subpage.assets %}
+								<a href="{{ subpage.url }}"><img src="{{asset.url}}"></a>
+							{% endfor %}
+							<h4>{{ subpage.meta.short_description }}</h4>
+						</div>
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section>
+
+{% include "footer" %}

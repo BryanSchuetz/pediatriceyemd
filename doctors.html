@@ -1,0 +1,29 @@
+{% include "header" %}
+
+	<section class="forms">
+    <div class="section group">
+			<div class="col span_2_of_2">
+				<h1>Doctors</h1>
+			</div>
+		</div>
+	</section>
+
+	<section class="outer">
+		<div class="doctor-profile section group">
+	 		  {% for page in site.pages %}
+	  			{% if page.title == "Doctors" %}
+	  				{% for subpage in pages %}
+		        	{% for asset in subpage.assets %}
+						 		<div class="col span_1_of_3">	        	
+						 			<img src="{{asset.url}}">
+						 			<h4>{{subpage.title}}</h4>
+						 			<p>{{subpage.body}}</p>
+						 		</div>
+					 		{% endfor %}
+	        	{% endfor %}
+	        {% endif %}
+	      {% endfor %}
+	  </div>    
+	</section>
+
+{% include "footer" %}

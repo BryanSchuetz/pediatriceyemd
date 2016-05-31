@@ -1,0 +1,152 @@
+{% include "header" %}
+
+ 	<div class="headline">
+	 	{% for page in site.pages %}
+	    {% if page.title == "Home" %}
+	      <h1>{{page.body}}</h1>
+	    {% endif %}
+	  {% endfor %}
+ 	</div>
+
+ <!--Hero-->
+
+  <section>
+  	<div>
+    </div>
+    <div class="hero flexslider flexslider-hero">
+      <ul class="slides">
+      	{% for page in site.pages %}
+  				{% if page.title == "Home" %}
+        		{% for asset in assets %}
+          		{% if asset.meta.use == "hero" %}
+            <li><img src="{{asset.url}}"></li>
+          		{% endif %}
+        		{% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="appointment">
+	 	<div class="section group">
+	 		<div class="col span_2_of_2">
+	 			<h4>Book an Appointment</h4>
+	 				<a href="tel:1-718-468-9800"><h2>718 <span class="color-blue">•</span> 468 <span class="color-blue">•</span> 9800</h2></a>
+	 		</div>
+	 	</div>
+ 	</section>
+
+ 	<div class="outer mission">
+	 	<h4>Mission</h4>
+	 	<h2>{{ meta.mission }}</h2>
+ 	</div>
+
+ 	<section class="outer about">
+ 		<div class="section group">
+ 			<div class="col span_2_of_2">
+ 				<div class="col span_2_of_2 about-logo"></div>
+			 	{% for page in site.pages %}
+			  	{% if page.title == "About" %}
+			 			<h3>{{page.body}}</h3>
+			 		{% endif %}
+			  {% endfor %}
+			  <a href="/insurances">
+	 				<button class="standard-button">
+	 					<h4>See Accepted Insurances</h4>
+	 				</button>
+	 			</a>
+			</div>
+		</div>
+ 	</section>
+
+ 	<section class="locations" class="locations-button">
+	 	<div class="section group">
+	 		<a href="/locations">
+		 		<div class="col span_1_of_3">
+		 			<i class="ss-icon">Location</i>
+		 			<h4>Visit</h4>
+		 			<h3>Fresh Meadows</h3>
+		 			<h4>Queens</h4>
+		 		</div>
+	 		</a>
+	 		<a href="/locations" class="locations-button">
+		 		<div class="col span_1_of_3">
+		 			<i class="ss-icon">Location</i>
+		 			<h4>Visit</h4>
+		 			<h3>Ridgewood</h3>
+		 			<h4>Queens</h4>
+		 		</div>
+	 		</a>
+	 		<a href="/locations" class="locations-button">
+		 		<div class="col span_1_of_3">
+		 			<i class="ss-icon">Location</i>
+		 			<h4>Visit</h4>
+		 			<h3>Sunnyside</h3>
+		 			<h4>Queens</h4>
+		 		</div>
+	 		</a>
+	 	</div>
+ 	</section>
+
+ 	<section class="doctors">
+	 	<div class="section group">
+	 		<h4>Our Doctors</h4>
+			<div class="doctor-headshots">
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/eric-lichtenstein.jpg"></a><h4>Eric A. Lichtenstein<br />MD</h4></div>
+  			<!-- <div class="col span_1_of_4"><a href="/doctors"><img src="/assets/daniel-laby.jpg"></a><h4>Daniel M. Laby<br />MD</h4></div> -->
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/jana-kuo.jpg"></a><h4>Jana Kuo<br />MD</h4></div>
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/regina-del-rosario.jpg"></a><h4>Regina Del Rosario<br />MD</h4></div>
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/rivka-markowitz.jpg"></a><h4>Rivka Markowitz<br />OD</h4></div>
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/smiley.jpg"></a><h4>Tehara C. Bailey<br />MD</h4></div>
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/yixing-he.jpg"></a><h4>Yixing he<br />OD</h4></div>
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/smiley.jpg"></a><h4>Wilzen A. Abubo<br />OD</h4></div>
+		</div>
+ 	</section>
+
+	<section class="outer organization">
+	 	<div class="section group">
+	 		<div class="col span_1_of_3">
+	 			<a href="http://www.aao.org/"><img src=/assets/aao.png></a>
+	 		</div>
+	 		<div class="col span_1_of_3">
+	 			<a href="http://www.aapos.org/"><img src=/assets/aapos.png></a>
+	 		</div>
+	 		<div class="col span_1_of_3">
+	 			<a href="http://www.nyee.edu/"><img src=/assets/nyeeims.png></a>
+	 		</div>
+	 	</div>
+	</section>
+
+	<section class="glossary-blog">
+	 	<div class="section group">
+	 		<div class="col span_1_of_2 glossary-teaser">
+	 			<h4>Glossary</h4>
+	 			<h2>Exotropia</h2>
+	 			<div class="img-wrapper">
+	 				<a href="/glossary"><img src="/assets/exotropia.png"></a>
+	 			</div>
+	 			<div class="glossary-cta">
+		 			<a href="/glossary">
+		 				<button class="standard-button">
+		 					<h4>See more disorders</h4>
+		 				</button>
+		 			</a>
+		 		</div>
+	 		</div>
+	 		<div class="col span_1_of_2 blog-teaser">
+	 			<h4>Blog</h4>
+	 			<h2>Common Myths About Astigmatism</h2>
+	 			<h3>The most accurate way to think of astigmatism is to imagine two spots of light – with at least one (and maybe both) missing their target.</h3>
+	 			<div class="blog-cta">
+		 			<a href="/blog">
+		 				<button class="standard-button">
+		 					<h4>Read More</h4>
+		 				</button>
+		 			</a>
+		 		</div>
+	 		</div>
+	 	</div>
+	</section>
+
+{% include "footer" %}
