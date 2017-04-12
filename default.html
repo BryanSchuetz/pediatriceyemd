@@ -3,7 +3,7 @@
  	<div class="headline">
 	 	{% for page in site.pages %}
 	    {% if page.title == "Home" %}
-	      <h1>{{page.body}}</h1>
+	      <h1 class="lead-in">{{page.body}}</h1>
 	    {% endif %}
 	  {% endfor %}
  	</div>
@@ -15,7 +15,7 @@
     </div>
     <div class="hero flexslider flexslider-hero">
       <ul class="slides">
-      	{% for page in site.pages %}
+      	{% for page in site.pages %} 
   				{% if page.title == "Home" %}
         		{% for asset in assets %}
           		{% if asset.meta.use == "hero" %}
@@ -51,9 +51,9 @@
 			 			<h3>{{page.body}}</h3>
 			 		{% endif %}
 			  {% endfor %}
-			  <a href="/insurances">
+			  <a href="/visiting-us">
 	 				<button class="standard-button">
-	 					<h4>See Accepted Insurances</h4>
+	 					<h4>Visiting Us</h4>
 	 				</button>
 	 			</a>
 			</div>
@@ -62,28 +62,25 @@
 
  	<section class="locations" class="locations-button">
 	 	<div class="section group">
-	 		<a href="/locations">
+	 		<a href="https://www.google.com/maps/place/PediatricEyeMD/@40.7083621,-74.2127502,9.98z/data=!4m8!1m2!2m1!1spediatric+eye+md!3m4!1s0x89c261a6a56c33ad:0xde5b21e71ef5883f!8m2!3d40.7302779!4d-73.7780717">
 		 		<div class="col span_1_of_3">
 		 			<i class="ss-icon">Location</i>
 		 			<h4>Visit</h4>
 		 			<h3>Fresh Meadows</h3>
-		 			<h4>Queens</h4>
 		 		</div>
 	 		</a>
-	 		<a href="/locations" class="locations-button">
+	 		<a href="https://goo.gl/maps/HCxcWZQQ7K32" class="locations-button">
 		 		<div class="col span_1_of_3">
 		 			<i class="ss-icon">Location</i>
 		 			<h4>Visit</h4>
 		 			<h3>Ridgewood</h3>
-		 			<h4>Queens</h4>
 		 		</div>
 	 		</a>
-	 		<a href="/locations" class="locations-button">
+	 		<a href="https://www.google.com/search?q=pediatric+eye+md&oq=pediatric+eye+md&aqs=chrome..69i57j69i60j69i61j0l3.6895j0j4&sourceid=chrome&ie=UTF-8#tbm=lcl&q=pediatric+eye+md+roosevelt&rlfi=hd:;si:11583058266576097362;mv:!1m3!1d7085.411267101866!2d-73.84445889999999!3d40.7376293!2m3!1f0!2f0!3f0!3m2!1i3095!2i450!4f13.1" class="locations-button">
 		 		<div class="col span_1_of_3">
 		 			<i class="ss-icon">Location</i>
 		 			<h4>Visit</h4>
 		 			<h3>Sunnyside</h3>
-		 			<h4>Queens</h4>
 		 		</div>
 	 		</a>
 	 	</div>
@@ -97,10 +94,9 @@
   			<!-- <div class="col span_1_of_4"><a href="/doctors"><img src="/assets/daniel-laby.jpg"></a><h4>Daniel M. Laby<br />MD</h4></div> -->
   			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/jana-kuo.jpg"></a><h4>Jana Kuo<br />MD</h4></div>
   			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/regina-del-rosario.jpg"></a><h4>Regina Del Rosario<br />MD</h4></div>
-        <div class="col span_1_of_4"><a href="/doctors"><img src="/assets/smiley.jpg"></a><h4>Tehara C. Bailey<br />MD</h4></div>
   			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/rivka-markowitz.jpg"></a><h4>Rivka Markowitz<br />OD</h4></div>
   			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/yixing-he.jpg"></a><h4>Yixing he<br />OD</h4></div>
-  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/smiley.jpg"></a><h4>Wilzen A. Abubo<br />OD</h4></div>
+  			<div class="col span_1_of_4"><a href="/doctors"><img src="/assets/wizen.jpg"></a><h4>Wilzen A. Ligand<br />OD</h4></div>
 		</div>
  	</section>
 

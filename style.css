@@ -13,7 +13,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {-webkit
                  BASE
 
 ========================================*/
-
+/* TinyQuark Changes*/
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +68,9 @@ h1 {
     font-style: normal;
     line-height: 1.1em;
 }
-
+h1.lead-in{
+    font-size: 2.5em;
+}
 h2 { 
     font-family: BrownLight, Helvetica, sans-serif;
     -webkit-font-smoothing:antialiased;
@@ -2024,6 +2026,9 @@ p.services-push {
     .blog-page-entry p {
         width: 70%;
     }
+    h1.lead-in{
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (min-width : 1025px) and (max-width : 1240px) {
@@ -2084,6 +2089,9 @@ p.services-push {
     li.flex-nav-next {
         display: none;
     }
+    h1.lead-in{
+    font-size: 2em;
+    }
 }
 
 
@@ -2108,5 +2116,3 @@ p.services-push {
         display: none;
     }
 }
-
-
